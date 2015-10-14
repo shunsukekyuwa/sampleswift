@@ -28,25 +28,39 @@ class ProfileListViewController: UIViewController {
     }
 
     func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        //cellを描画している
+        //cellの情報を書き込む
+        //indexPathはsectionとrowが入っている構造体
+        //tableviewを作って、cellを画面に収まるように作っている
         
+        let profileCell: String
+        
+        if(indexPath.row % 2 == 1){
+            profileCell = "ProfileCell1"
+        }else{
+            profileCell = "ProfileCell2"
+        }
+
+       
         // tableCell の ID で UITableViewCell のインスタンスを生成
-        let cell = table.dequeueReusableCellWithIdentifier("ProfileCell1", forIndexPath: indexPath)
+        let cell = table.dequeueReusableCellWithIdentifier("\(profileCell)", forIndexPath: indexPath)
         
+        //dequeue は画面+-αの分だけセルが使い回される、再利用されるセルも含めて
         
         let img = UIImage(named:"\(myArray[0])")
         
             
-            // Tag番号 1 で UIImageView インスタンスの生成
-            let imageView = table.viewWithTag(1) as! UIImageView
-            imageView.image = img
+        // Tag番号 1 で UIImageView インスタンスの生成
+        let imageView = table.viewWithTag(1) as! UIImageView
+        imageView.image = img
             
-            // Tag番号 ２ で UILabel インスタンスの生成
-            let label1 = table.viewWithTag(2) as! UILabel
-            label1.text = "\(myArray[1])"
+        // Tag番号 ２ で UILabel インスタンスの生成
+        let label1 = table.viewWithTag(2) as! UILabel
+        label1.text = "\(myArray[1])"
             
-            // Tag番号 ３ で UILabel インスタンスの生成
-            let label2 = table.viewWithTag(3) as! UILabel
-            label2.text = "\(myArray[2])"
+        // Tag番号 ３ で UILabel インスタンスの生成
+        let label2 = table.viewWithTag(3) as! UILabel
+        label2.text = "\(myArray[2])"
         
         return cell
     
