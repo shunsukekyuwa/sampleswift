@@ -46,6 +46,7 @@ class ProfileListViewController: UIViewController {
         let cell = table.dequeueReusableCellWithIdentifier("\(profileCell)", forIndexPath: indexPath)
         
         //dequeue は画面+-αの分だけセルが使い回される、再利用されるセルも含めて
+		//メモリを節約している
         
         let img = UIImage(named:"\(myArray[0])")
         
