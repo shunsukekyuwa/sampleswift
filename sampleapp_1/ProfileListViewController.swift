@@ -12,20 +12,23 @@ class ProfileListViewController: UIViewController {
     
     let myArray: NSArray = ["myprofile4.png", "久和俊介", "ウェーイ！をしてみました。"]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
     
     //TableViewのセルの数を指定
     func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 100
     }
     
     //TableViewのセルの高さを指定
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+
 
     func tableView(table: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //cellを描画している
@@ -35,15 +38,21 @@ class ProfileListViewController: UIViewController {
         
         let profileCell: String
         
-        if(indexPath.row % 2 == 1){
+        if(indexPath.row % 10 == 9){
+            profileCell = "ProfileCell1"
+        }else if(indexPath.row % 2 == 0){
             profileCell = "ProfileCell1"
         }else{
-            profileCell = "ProfileCell2"
+            profileCell = "ProfileCell1"
         }
 
        
         // tableCell の ID で UITableViewCell のインスタンスを生成
         let cell = table.dequeueReusableCellWithIdentifier("\(profileCell)", forIndexPath: indexPath)
+        
+        if(indexPath.row % 10 == 9){
+            cell.backgroundColor = UIColor.whiteColor();
+        }
         
         //dequeue は画面+-αの分だけセルが使い回される、再利用されるセルも含めて
 		//メモリを節約している
