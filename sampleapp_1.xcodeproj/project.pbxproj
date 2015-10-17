@@ -15,6 +15,7 @@
 		DDDC787F1BCE75730040F026 /* sampleapp_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDC787E1BCE75730040F026 /* sampleapp_1Tests.swift */; };
 		DDDC788A1BCE75730040F026 /* sampleapp_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDC78891BCE75730040F026 /* sampleapp_1UITests.swift */; };
 		DDDC78A01BCE8D060040F026 /* myprofile4.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDC789F1BCE8D050040F026 /* myprofile4.png */; settings = {ASSET_TAGS = (); }; };
+		DDE8976A1BD244050021C1B8 /* ProfileListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE897691BD244050021C1B8 /* ProfileListItemTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DDDC78891BCE75730040F026 /* sampleapp_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleapp_1UITests.swift; sourceTree = "<group>"; };
 		DDDC788B1BCE75730040F026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDDC789F1BCE8D050040F026 /* myprofile4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = myprofile4.png; path = ../../myprofile4.png; sourceTree = "<group>"; };
+		DDE897691BD244050021C1B8 /* ProfileListItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileListItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		DDDC78681BCE75730040F026 /* sampleapp_1 */ = {
 			isa = PBXGroup;
 			children = (
+				DDE8976B1BD246070021C1B8 /* ProfileList */,
 				DDDC789F1BCE8D050040F026 /* myprofile4.png */,
 				DDDC78691BCE75730040F026 /* AppDelegate.swift */,
-				DDDC786B1BCE75730040F026 /* ProfileListViewController.swift */,
 				DDDC786D1BCE75730040F026 /* Main.storyboard */,
 				DDDC78701BCE75730040F026 /* Assets.xcassets */,
 				DDDC78721BCE75730040F026 /* LaunchScreen.storyboard */,
@@ -126,6 +128,15 @@
 				DDDC788B1BCE75730040F026 /* Info.plist */,
 			);
 			path = sampleapp_1UITests;
+			sourceTree = "<group>";
+		};
+		DDE8976B1BD246070021C1B8 /* ProfileList */ = {
+			isa = PBXGroup;
+			children = (
+				DDDC786B1BCE75730040F026 /* ProfileListViewController.swift */,
+				DDE897691BD244050021C1B8 /* ProfileListItemTableViewCell.swift */,
+			);
+			name = ProfileList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDC786C1BCE75730040F026 /* ProfileListViewController.swift in Sources */,
+				DDE8976A1BD244050021C1B8 /* ProfileListItemTableViewCell.swift in Sources */,
 				DDDC786A1BCE75730040F026 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +497,7 @@
 				DDDC78901BCE75730040F026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDDC78911BCE75730040F026 /* Build configuration list for PBXNativeTarget "sampleapp_1Tests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +506,7 @@
 				DDDC78931BCE75730040F026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDDC78941BCE75730040F026 /* Build configuration list for PBXNativeTarget "sampleapp_1UITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +515,7 @@
 				DDDC78961BCE75730040F026 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
