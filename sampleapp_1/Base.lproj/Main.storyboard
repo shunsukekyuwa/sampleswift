@@ -98,8 +98,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wro-E5-1bA"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="a0x-lU-c92"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3H0-GZ-A6o"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uTY-Gs-FVi"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -107,6 +107,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="tableView" destination="nsK-tA-x4q" id="uZX-dN-Ez1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ProfileListViewController: UIViewController {
+class ProfileListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+   
     
     let myArray: NSArray = ["myprofile4.png", "久和俊介", "ウェーイ！をしてみました。"]
 
@@ -32,6 +35,29 @@ class ProfileListViewController: UIViewController {
         //cellの情報を書き込む
         //indexPathはsectionとrowが入っている構造体
         //tableviewを作って、cellを画面に収まるように作っている
+        
+        switch indexPath.row % 2{
+        case 1:
+            let profileCell: String
+            profileCell = "ProfileCell1"
+            
+            let cell = 
+        default:
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         let profileCell: String
         

@@ -31,8 +31,20 @@ class ProfileListItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(image: String, name: String, intro: String){
-        
+    func setCell1(image: String, name: String, intro: String) {
+        let imageView = profileImage1 as UIImageView
+        imageView.image = UIImage(named: image)
+        profileName1.text = name
+        profileIntro1.text = intro
     }
+    
+    func setCell2(image: String, name: String, intro: String) {
+        profileImage2.image = UIImage(named: image)
+        profileName2.text = name
+        profileIntro2.text = intro
+    }
+
+        
+    
 
 }
