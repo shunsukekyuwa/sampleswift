@@ -22,7 +22,7 @@ class ProfileListViewController: UIViewController, UITableViewDelegate, UITableV
     
     //TableViewのセルの数を指定
     func tableView(table: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     //TableViewのセルの高さを指定
@@ -38,62 +38,67 @@ class ProfileListViewController: UIViewController, UITableViewDelegate, UITableV
         
         switch indexPath.row % 2{
         case 1:
-            let profileCell: String
-            profileCell = "ProfileCell1"
+            let cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell1") as! ProfileListItemTableViewCell
+            cell.setCell1("\(myArray[0])", name: "\(myArray[1])", intro: "\(myArray[2])")
+            return cell
             
-            let cell = 
         default:
+            let cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell2") as! ProfileListItemTableViewCell
+            cell.setCell2("\(myArray[0])", name: "\(myArray[1])", intro: "\(myArray[2])")
+            return cell
+            
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        let profileCell: String
-        
-        if(indexPath.row % 2 == 1){
-            profileCell = "ProfileCell1"
-        }else{
-            profileCell = "ProfileCell2"
-        }
-
-       
-        // tableCell の ID で UITableViewCell のインスタンスを生成
-        let cell = table.dequeueReusableCellWithIdentifier("\(profileCell)", forIndexPath: indexPath)
-        
-        //dequeue は画面+-αの分だけセルが使い回される、再利用されるセルも含めて
-		//メモリを節約している
-        
-        let img = UIImage(named:"\(myArray[0])")
-        
-            
-        // Tag番号 1 で UIImageView インスタンスの生成
-        let imageView = table.viewWithTag(1) as! UIImageView
-        imageView.image = img
-            
-        // Tag番号 ２ で UILabel インスタンスの生成
-        let label1 = table.viewWithTag(2) as! UILabel
-        label1.text = "\(myArray[1])"
-            
-        // Tag番号 ３ で UILabel インスタンスの生成
-        let label2 = table.viewWithTag(3) as! UILabel
-        label2.text = "\(myArray[2])"
-        
-        return cell
-    
     }
-
+    
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        
+//        let profileCell: String
+//        
+//        if(indexPath.row % 2 == 1){
+//            profileCell = "ProfileCell1"
+//        }else{
+//            profileCell = "ProfileCell2"
+//        }
+//
+//       
+//        // tableCell の ID で UITableViewCell のインスタンスを生成
+//        let cell = table.dequeueReusableCellWithIdentifier("\(profileCell)", forIndexPath: indexPath)
+//        
+//        //dequeue は画面+-αの分だけセルが使い回される、再利用されるセルも含めて
+//		//メモリを節約している
+//        
+//        let img = UIImage(named:"\(myArray[0])")
+//        
+//            
+//        // Tag番号 1 で UIImageView インスタンスの生成
+//        let imageView = table.viewWithTag(1) as! UIImageView
+//        imageView.image = img
+//            
+//        // Tag番号 ２ で UILabel インスタンスの生成
+//        let label1 = table.viewWithTag(2) as! UILabel
+//        label1.text = "\(myArray[1])"
+//            
+//        // Tag番号 ３ で UILabel インスタンスの生成
+//        let label2 = table.viewWithTag(3) as! UILabel
+//        label2.text = "\(myArray[2])"
+//        
+//        return cell
+//    
+//    }
+//
+//        
         
         
     override func didReceiveMemoryWarning() {
